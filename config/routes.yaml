@@ -1,3 +1,13 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+app_home:
+    path: /
+    controller: App\Controller\PinsController::index
+
+app_pins_show:
+    path: /pins/{id<\d+>}
+    controller: App\Controller\PinsController::show
+
+app_pins_create:
+    path: /pins/create
+    controller: App\Controller\PinsController::create
+    methods: GET|POST
+
